@@ -96,7 +96,7 @@ const Store = (() => {
   }
 
   const uid = () => Date.now().toString(36) + Math.random().toString(36).slice(2, 8);
-  const defaultAction = () => ({ status: "todo", notes: "", sub: {}, custom: [], updatedAt: null, doneAt: null });
+  const defaultAction = () => ({ status: "todo", notes: "", sub: {}, skip: {}, custom: [], updatedAt: null, doneAt: null });
 
   function action(id) {
     return { ...defaultAction(), ...(state.actions[id] || {}) };
